@@ -5,6 +5,7 @@ from . import views
 app_name = 'tracker'
 
 urlpatterns = [
-        path('', views.home),
+    path('', views.home),
+    path('map/', views.map),
 ]
 
