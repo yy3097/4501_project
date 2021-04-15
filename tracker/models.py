@@ -159,7 +159,7 @@ class Sighting(models.Model):
     )
 
     other_interactions = models.CharField(
-        max_length = 100
+        max_length = 100,
         blank = True,
     )
 
