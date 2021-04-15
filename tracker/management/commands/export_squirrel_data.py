@@ -13,7 +13,13 @@ class Command(BaseCommand):
         path = kwargs['file_path']
         try:
             sightings = Sighting.objects.all()
-            df = pd.DataFrame(sightings.values())
+            columns = ['X','Y','Unique Squirrel ID','Hectare','Shift','Date','Hectare Squirrel Number','Age',
+                       'Primary Fur Color','Highlight Fur Color','Combination of Primary and Highlight Color',
+                       'Color notes','Location','Above Ground Sighter Measurement','Specific Location','Running',
+                       'Chasing','Climbing','Eating','Foraging','Other Activities','Kuks','Quaas','Moans',
+                       'Tail flags','Tail twitches','Approaches','Indifferent','Runs from','Other Interactions',
+                       'Lat/Long']
+            df = pd.DataFrame(sightings.values(),columns=columns)
             df.to_csv(path)
         except Exception as e:
             raise e
