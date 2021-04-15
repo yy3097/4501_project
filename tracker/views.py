@@ -6,9 +6,4 @@ def home(request):
     return render(request,'tracker/home.html',{})
 
 def map(request):
-    sightings = Sighting.objects.all()[:100]
-    locs = []
-    for sighting in sightings:
-        loc = {"longitude": sighting.longitude, "latitude": sighting.latitude}
-        locs.append(loc)
-    return render(request, 'tracker/map.html', {'sightings': locs})
+    return render(request, 'tracker/map.html', {'sightings': Sighting.objects.all()[:100]})
