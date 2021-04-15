@@ -65,17 +65,18 @@ class Sighting(models.Model):
     )
 
     highlight_fur_color = models.CharField(
-        max_length=50,
-        blank=True
+        max_length = 50,
+        blank = True
     )
 
     combination = models.CharField(
-        max_length=50,
-        blank=True
+        max_length = 50,
+        blank = True
     )
 
     color_notes = models.CharField(
-        blank=True
+        max_length = 100,
+        blank = True,
     )
 
     ABOVE_GROUND = 'Above Ground'
@@ -84,7 +85,6 @@ class Sighting(models.Model):
         (ABOVE_GROUND, _('Above Ground')),
         (GROUND_PLANE, _('Ground Plane')),
     ]
-
     location = models.CharField(
         max_length = 20,
         choices = LOCATION_,
@@ -92,76 +92,79 @@ class Sighting(models.Model):
     )
 
     above_ground = models.IntegerField(
-        blank=True,
-        null=True,
+        blank = True,
+        null = True,
     )
 
     specific_location = models.CharField(
-        blank=True,
+        max_length = 100,
+        blank = True,
     )
 
     running = models.BooleanField(
-        blank=True,
+        blank = True,
     )
 
     chasing = models.BooleanField(
-        blank=True,
+        blank = True,
     )
 
     climbing = models.BooleanField(
-        blank=True,
+        blank = True,
     )
 
     eating = models.BooleanField(
-        blank=True,
+        blank = True,
     )
 
     foraging = models.BooleanField(
-        blank=True,
+        blank = True,
     )
 
     other_activities = models.CharField(
-        blank=True,
+        max_length = 100,
+        blank = True,
     )
 
     kuks = models.BooleanField(
-        blank=True,
+        blank = True,
     )
 
     quaas = models.BooleanField(
-        blank=True,
+        blank = True,
     )
 
     moans = models.BooleanField(
-        blank=True,
+        blank = True,
     )
 
     tail_flags = models.BooleanField(
-        blank=True,
+        blank = True,
     )
 
     tail_twitches = models.BooleanField(
-        blank=True,
+        blank = True,
     )
 
     approaches = models.BooleanField(
-        blank=True,
+        blank = True,
     )
 
     indifferent = models.BooleanField(
-        blank=True,
+        blank = True,
     )
 
     runs_from = models.BooleanField(
-        blank=True,
+        blank = True,
     )
 
     other_interactions = models.CharField(
-        blank=True
+        max_length = 100
+        blank = True,
     )
 
     lat_long = models.CharField(
-        max_length=100
+        max_length = 100,
     )
 
     def __str__(self):
