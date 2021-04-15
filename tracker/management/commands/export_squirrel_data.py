@@ -19,7 +19,8 @@ class Command(BaseCommand):
                        'Chasing','Climbing','Eating','Foraging','Other Activities','Kuks','Quaas','Moans',
                        'Tail flags','Tail twitches','Approaches','Indifferent','Runs from','Other Interactions',
                        'Lat/Long']
-            df = pd.DataFrame(sightings.values(),columns=columns)
+            df = pd.DataFrame(sightings.values())
+            df.columns = columns
             df.to_csv(path)
         except Exception as e:
             raise e
