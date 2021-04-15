@@ -91,7 +91,8 @@ class Sighting(models.Model):
         blank = True,
     )
 
-    above_ground = models.IntegerField(
+    above_ground = models.CharField(
+        max_length = 10,
         blank = True,
         null = True,
     )
