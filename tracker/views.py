@@ -64,8 +64,28 @@ def add(request):
 
     return render(request, 'tracker/add.html', {'form': form})
 
-
+@require_http_methods(['GET'])
 def stat(request):
+    num_eating = Sighting.objects.filter(eating=True).count()
+    num_running = Sighting.objects.filter(running=True).count()
+    num_chasing = Sighting.objects.filter(chasing=True).count()
+    num_climbing = Sighting.objects.filter(climbing=True).count()
+    num_foraging = Sighting.objects.filter(foraging=True).count()
+    num_total = Sighting.objects.count()
+    context = {"running": 
+                {"num": num_running, "percent": "{:.2f}%".format(num_running / num_total * 100)},
+            "chasing": 
+                {"num": num_chasing, "percent": "{:.2f}%".format(num_chasing / num_total * 100)},
+            "climbing": 
+                {"num": num_climbing, "percent": "{:.2f}%".format(num_climbing / num_total * 100)},
+            "eating": 
+                {"num": num_eating, "percent": "{:.2f}%".format(num_eating / num_total * 100)},
+            "foraging": 
+                {"num": num_foraging, "percent": "{:.2f}%".format(num_foraging / num_total * 100)},
+    }
+
+    return render(request, "tracker/stat.html", context)
+    
     pass
     
 
