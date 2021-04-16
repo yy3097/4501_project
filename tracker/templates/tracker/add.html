@@ -8,19 +8,13 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-    <title>Update a Squirrel </title>
+    <title>Add a New Sighting</title>
   </head>
   <body style="background-repeat: no-repeat; background-size: cover; background-image: url('https://images.theconversation.com/files/382224/original/file-20210203-21-kb8tu8.jpg')">
   <body background="https://images.theconversation.com/files/382224/original/file-20210203-21-kb8tu8.jpg">
 		<div class="container">
-      <h1>Update squirrel: {{ sighting.squirrel_id }}</h1>
-       <h1>Squirrel ID: {{ sighting.squirrel_id }}</h1>
-       <h1>Latitude: {{ sighting.latitude }}</h1>
-       <h1>Longtitude: {{ sighting.longitude }}</h1>
-       <h1>Shift: {{ sighting.shift }}</h1>
-       <h1>Date: {{ sighting.date }}</h1>
-       <h1>Age{{ sighting.age }}</h1>         
-        <form action="/sighting_list/{{ squirrel_id }}/" method="post">
+      <h1>Add a New Sighting</h1>
+        <form action="/sighting_list/add/" method="post">
             {% csrf_token %}
             {{ form }}
             <input type="submit" value="Submit">
@@ -28,3 +22,4 @@
 		</div>
   </body>
 </html>
+
