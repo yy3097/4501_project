@@ -14,7 +14,7 @@
   <body background="https://images.theconversation.com/files/382224/original/file-20210203-21-kb8tu8.jpg">
 		<div class="container">
       <h1>Add a New Sighting</h1>
-        <form action="/sighting_list/add/" method="post">
+        <form action="sightings/add/" method="post">
             {% csrf_token %}
             {{ form }}
             <input type="submit" value="Submit">
