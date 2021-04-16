@@ -20,7 +20,7 @@
        <h1 style="color:white">Shift: {{ sighting.shift }}</h1>
        <h1 style="color:white">Date: {{ sighting.date }}</h1>
        <h1 style="color:white">Age{{ sighting.age }}</h1>         
-        <form action="/sightings/{{ sighting.squirrel_id }}/" method="post">
+        <form action="/sightings/{{ squirrel_id }}/" method="post">
             {% csrf_token %}
             {{ form }}
             <input type="submit" value="Submit">
