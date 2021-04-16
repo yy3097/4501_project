@@ -11,6 +11,6 @@ urlpatterns = [
     # path('sightings/<str:id>/', views.update),
     re_path(r'sightings/(?P<squirrel_id>\d{1,2}[A-Z]{1}-[A-Z]{2}-\d{4}-\d{2})', views.update, name='update'),
     path('sightings/add/', views.add, name="add"),
-    path('stat/', views.stat, name="stat"),
+    path('sightings/stats/', views.stat, name="stat"),
 ]
 
