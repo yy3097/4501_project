@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Update squirrel: {{squirrel_id}}</h1>
+
+<form action="/sightings/{{squirrel_id}}/" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" value="Submit">
+</form>
+
+</body>
+</html>
