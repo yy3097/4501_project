@@ -6,6 +6,7 @@ app_name = 'tracker'
 
 urlpatterns = [
     path('', views.home),
-    path('map/', views.map),
+    path('map/', views.map, name="map"),
+    path('sightings/', views.SightingListView.as_view(), name="sighting-list"),
 ]
 
