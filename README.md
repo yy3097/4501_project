@@ -1,7 +1,7 @@
 # IEOR E4501 Final Project - Squirrel Tracker
 
 ## Description
-
+This project is a Django based "Squirrel Tracker" web application. It is aimed to track all the squirrels in the Central Park of New York City, based on the 2018 Central Park Squirrel Census data. People are allowed to add, update and view the statistics of the data. 
 
 
 
