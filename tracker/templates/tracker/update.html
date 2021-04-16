@@ -13,14 +13,14 @@
   <body style="background-repeat: no-repeat; background-size: cover; background-image: url('https://images.theconversation.com/files/382224/original/file-20210203-21-kb8tu8.jpg')">
   <body background="https://images.theconversation.com/files/382224/original/file-20210203-21-kb8tu8.jpg">
 		<div class="container">
-      <h1 style="color:white">Update squirrel: {{ sighting.squirrel_id }}</h1>
-       <h1 style="color:white">Squirrel ID: {{ sighting.squirrel_id }}</h1>
-       <h1 style="color:white">Latitude: {{ sighting.latitude }}</h1>
+      {% comment %} <h1 style="color:white">Update squirrel: {{ squirrel_id }}</h1>
+       <h1 style="color:white">Squirrel ID: {{ squirrel_id }}</h1>
+       <h1 style="color:white">Latitude: {{ latitude }}</h1>
        <h1 style="color:white">Longtitude: {{ sighting.longitude }}</h1>
        <h1 style="color:white">Shift: {{ sighting.shift }}</h1>
        <h1 style="color:white">Date: {{ sighting.date }}</h1>
-       <h1 style="color:white">Age{{ sighting.age }}</h1>         
-        <form action="/sightings/{{ squirrel_id }}/" method="post">
+       <h1 style="color:white">Age{{ sighting.age }}</h1>          {% endcomment %}
+        <form style="color:white" action="/sightings/{{ squirrel_id }}/" method="post">
             {% csrf_token %}
             {{ form }}
             <input type="submit" value="Submit">
