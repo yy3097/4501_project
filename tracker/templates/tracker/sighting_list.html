@@ -13,7 +13,7 @@
   <body style="background-repeat: no-repeat; background-size: cover; background-image: url('https://images.theconversation.com/files/382224/original/file-20210203-21-kb8tu8.jpg')">
   <body background="https://images.theconversation.com/files/382224/original/file-20210203-21-kb8tu8.jpg">
 <div class="container">
-<h1>List of Squirrels</h1>
+<h1 style="color:white">List of Squirrels</h1>
 <a href='/sightings/add/'> Add a sighting! </a>
 <table>
   <!-- <thead>
@@ -26,9 +26,9 @@
   <tbody>
     {% for sighting in sightings %}
         <tr> 
-            <td> {{sighting.squirrel_id}} </td>
-            <td> {{sighting.date}} </td>
-	    <td> <a href="/sightings/{{ sighting.squirrel_id }}/">Squirrel sighting: {{ squirrel.squirrel_id }} </a></td>
+            <td style="color:white"> {{sighting.squirrel_id}} </td>
+            <td style="color:white"> {{sighting.date}} </td>
+	    <td style="color:white"> <a href="/sightings/{{ sighting.squirrel_id }}/">Squirrel sighting: {{ sighting.squirrel_id }} </a></td>
         </tr>
     {% endfor %}
   </tbody>

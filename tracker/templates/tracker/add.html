@@ -13,8 +13,8 @@
   <body style="background-repeat: no-repeat; background-size: cover; background-image: url('https://images.theconversation.com/files/382224/original/file-20210203-21-kb8tu8.jpg')">
   <body background="https://images.theconversation.com/files/382224/original/file-20210203-21-kb8tu8.jpg">
 		<div class="container">
-      <h1>Add a New Sighting</h1>
-        <form action="sightings/add/" method="post">
+      <h1 style="color:white">Add a New Sighting</h1>
+        <form action="/sightings/add/" method="post" style="color:white">
             {% csrf_token %}
             {{ form }}
             <input type="submit" value="Submit">
